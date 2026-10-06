@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment1_the_basics.Views.FirstPage"
+             Title="FirstPage">
+    
+    <Grid>
+        <!-- Top message -->
+        <VerticalStackLayout
+            VerticalOptions="Start"
+            Padding="20">
+
+            <Label 
+                x:Name="initial_message"
+                FontSize="Large"
+                Text="calculate your age!"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+
+        <!-- image section -->
+        <FlexLayout
+            Direction="Row"
+            Wrap="Wrap"
+            JustifyContent="Start"
+            AlignItems="Start"
+            x:Name="ImageContainer"
+            VerticalOptions="Center">
+        </FlexLayout>
+
+        <!-- fields and button -->
+        <VerticalStackLayout
+            VerticalOptions="End"
+            Padding="20"
+            Spacing="5">
+
+            <Label Text="name"  Padding="10"/>
+            <Entry Placeholder="Enter your name"
+                   x:Name ="Name_Entry"/>
+
+            <Label Text="age" Padding="10" />
+            <Entry Placeholder="Enter your age"
+                   x:Name ="Age_Entry"/>
+
+            <Button 
+                Text="calculate"
+                Padding="10"
+                Clicked="on_calculate"/>
+
+        </VerticalStackLayout>
+    </Grid>
+
+
+
+
+
+</ContentPage>
